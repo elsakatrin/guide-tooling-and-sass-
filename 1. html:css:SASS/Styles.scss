@@ -1,0 +1,10 @@
+//These are the files I'm working on for the website
+//Styles.css is linked to the html but the partial files are linked into here, Style.scss
+//Then they all load onto the CSS file from this one 
+//Would be handy for bigger projects
+//Figured out later that I should have been using @use but kept the forward because it also worked
+//@Forward is rather used if your scss files are in another folder 
+
+@forward 'base.scss';
+@forward 'header';
+@forward 'main';

@@ -1,0 +1,102 @@
+//Partial file
+
+
+
+//variables 
+
+$bgcolor: #EEE2DF;
+$textcolor: black;
+$font-family: 'Raleway';
+$sectionHeading: 30px; 
+$bannerHeading: 44px;
+
+
+//Here are some basic typography settings - I used the variables in fontsize, section (that I made in HTML) and heading.
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: $font-family;
+}
+
+h1, 
+h2, 
+h3 {
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+section h1 {
+    text-align: center;
+    margin-top: 26px;
+    font-weight: bold;
+    font-size: $sectionHeading;
+}
+
+h3 {
+    text-align: center;
+  }
+
+p{
+    margin-top: 0;
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 3%;
+}
+
+
+
+//Here I made Mixins with a banner. Also used nesting.
+//Found it very useful expecially if I had more banners. 
+//I used mixin to effect every banner in the code and then @include to turn those settings onto the targeted class (lead-banner)
+
+ @mixin banner {
+    width: 100%;
+    position: relative;
+    color: white;
+
+    .banner-content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    span{
+        font-size: $bannerHeading;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.lead-banner {
+    @include banner;
+}
+
+
+//These are the boxes on the bottom of the page. I used @extend for them.
+//I put all the styles on the first one and then used @extend to the second one so I didn't have to copy the settings
+//Now they both look the same if I only change the first one. 
+
+.message {
+    font-size: 20px;
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    padding: auto;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message2 {
+   @extend .message 
+}

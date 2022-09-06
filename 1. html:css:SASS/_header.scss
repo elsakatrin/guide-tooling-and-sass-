@@ -1,0 +1,40 @@
+//partial file
+
+
+//using sass nesting styles for the header/navbar
+//That means I could edit all the styles under the header - it helps so you don't have to write as much and it's all in the same place 
+
+header {
+    overflow: hidden;
+    background-color: #000000;
+    padding: 20px 10px;
+    a {
+      float: right;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 12px;
+      margin-right: 30px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px; 
+    }
+    a:hover {
+      background-color: rgb(100, 100, 100, 0.5);
+      color: rgb(255, 255, 255);
+      border-radius: 30px;
+    }
+    .sasslogo {
+      width: 100px;
+      position: relative;
+      float: left;
+      left: 30px;
+
+    }
+  }
+
+  a, a:visited, 
+  a:active {
+      text-decoration: none;
+  }
+  
